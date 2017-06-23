@@ -83,7 +83,7 @@ $(() => {
         url: '/insertTopping',
         type: 'POST',
         data: {
-          topping_name: $('#nameOfTopping').val(),
+          topping_name: $('#nameOfTopping').val().toLowerCase(),
           v_or_n: $('#VorN').val()
         }
       })
@@ -106,7 +106,7 @@ $(() => {
         url: '/insertSauce',
         type: 'POST',
         data: {
-          sauce_name: $('#nameOfsauce').val()
+          sauce_name: $('#nameOfsauce').val().toLowerCase()
         }
       }).done((works)=>{
         var data = JSON.parse(works).thanks;
@@ -127,7 +127,7 @@ $(() => {
         url: '/insertCheese',
         type: 'POST',
         data: {
-          cheese_name: $('#nameOfCheese').val()
+          cheese_name: $('#nameOfCheese').val().toLowerCase()
         }
       }).done((works) => {
         var data = JSON.parse(works).thanks;
