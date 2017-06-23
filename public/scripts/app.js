@@ -156,7 +156,7 @@ $(() => {
         for (var i=0; i < newToppings.length; i++){
           console.log("THEESE are toppings",newToppings[i].topping_name)
           data.push(newToppings[i].topping_name)
-          data.push(',')
+          data.push(', ')
         }
         $('#toppings').append(data)
         $('#clear').append('<a><h3>Clear</h3></a>')
