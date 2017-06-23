@@ -74,6 +74,7 @@ app.post("/insertTopping", (req, res) => {
 
 app.post("/insertSauce", (req, res) => {
   console.log('req.body', req.body)
+  console.log(req.body.sauce_name)
   knex.select('sauce_name').from('sauces').where({
     sauce_name: req.body.sauce_name
   }).then((response) =>{

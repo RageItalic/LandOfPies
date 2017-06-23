@@ -53,6 +53,7 @@ $(() => {
 
   $('#tryAgain').click( function(e) {
     e.preventDefault();
+    console.log(e)
     $('#nameOfTopping').val('');
     $('#ThankYouMsg').empty();
     $(this).empty();
@@ -60,6 +61,7 @@ $(() => {
 
   $('#tryAgainSauce').click(function(e){
     e.preventDefault();
+    console.log(e)
     $('#nameOfsauce').val('');
     $('#ThankYouMsgSauce').empty();
     $(this).empty();
@@ -67,6 +69,7 @@ $(() => {
 
   $('#tryAgainCheese').click(function(e){
     e.preventDefault();
+    console.log(e)
     $('#nameOfCheese').val('');
     $('#ThankYouMsgCheese').empty();
     $(this).empty();
