@@ -1,17 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <title>Home Page</title>
 
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link rel="stylesheet" href="/vendor/border-box.css" type="text/css" />
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
     <script type="text/javascript" src="/vendor/jquery-3.0.0.js"></script>
+
     <script type="text/javascript" src="/scripts/app.js"></script>
   </head>
 
   <body>
-    <h1>Hello World!</h1>
+
+    <div>
+      <img class="hero-image parallax" src="./pizza1.jpg">
+      <div class="hero-text">
+        <h1 id="hero-head">Making Pizza a Better Experience.</h1>
+      </div>
+    </div>
+
+
+    <h2 id="h2" style="text-align: center; font-size: 45px;"><u><b>Confused about what to put on your Pizza?</b></u></h2>
+
+    <p id="p1">Dont worry... you're not the only one! I was invented by a teenage genius (soon-to-be billionaire) to solve this exact problem!!</p>
+
+    <p id="p2">Tell me how many ingredints you want on your Pizza and let me decide for you. After all, that's what I was created for!</p>
+
+
+    <form action='/getToppings' method="POST" id="generator" style="border:1px solid #ccc">
+      <div class="container">
+        <label><b>Number of Toppings</b></label>
+        <input type="text" placeholder="Tell me how many here." id="numberOfToppings" name="numberOfToppings" style="font-size: 25px;" required>
+        <label><b>Vegetarian Or Non-Vegetarian:</b></label>
+        <select name="VorN" id="vegOrnon">
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Non-Vegetarian">Non-Vegetarian</option>
+        </select>
+        <div class="clearfix">
+          <button type="button" class="cancelbtn2">Cancel</button>
+          <button type="submit" class="signupbtn2">Submit</button>
+        </div>
+      </div>
+    </form>
+
+    <div></div>
+
+    <br />
+    <br />
+
+    <div class="container" style="border:1px solid #ccc">
+      <div>
+        <h3 id="toppings"></h3>
+      </div>
+      <div id="clear"></div>
+    </div>
+
+    <br />
+
+    <h2 style="text-align: center; font-size: 45px;"><u>Do you know about toppings I dont know about!?</u></h2>
+
+    <p>Tell me here and help me make Pizza a better experience for everyone!</p>
+
+
+    <form method="POST" action="/insertTopping" style="border:1px solid #ccc" id="ToppingForm">
+      <div class="container">
+        <label><b>Topping Name</b></label>
+        <input type="text" placeholder="Topping name here." name="toppingName" id="nameOfTopping" required>
+        <label><b>Vegetarian Or Non-Vegetarian:</b></label>
+        <select name="VorN" id="VorN">
+          <option value="Vegetarian">Vegetarian</option>
+          <option value="Non-Vegetarian">Non-Vegetarian</option>
+        </select>
+        <div class="clearfix">
+          <button type="button" class="cancelbtn1">Cancel</button>
+          <button type="submit" class="signupbtn1">Submit</button>
+        </div>
+      </div>
+      <div>
+        <h2 id="ThankYouMsg"></h2>
+      </div>
+      <div>
+        <h3 id="tryAgain"></h3>
+      </div>
+    </form>
+
+
+    <h2 style="text-align: center; font-size: 45px;"><u>Do you know about sauces I haven't heard about?!</u></h2>
+
+    <p>Share you secrets with me! C'mon!!</p>
+
+
+    <form method="POST" action="/insertSauce" style="border:1px solid #ccc" id="sauceForm">
+      <div class="container">
+        <label><b>Sauce Name</b></label>
+        <input type="text" placeholder="Sauce name here." name="sauceName" required id="nameOfsauce">
+        <div class="clearfix">
+          <button type="button" class="cancelbtn3">Cancel</button>
+          <button type="submit" class="signupbtn3">Submit</button>
+        </div>
+      </div>
+      <div>
+        <h2 id="ThankYouMsgSauce"></h2>
+      </div>
+      <div>
+        <h3 id="tryAgainSauce"></h3>
+      </div>
+    </form>
+
+
+    <h2 style="text-align: center; font-size: 45px;"><u>I can sense that you're hiding some cheeses from me!</u></h2>
+
+    <p>I know you know about cheeses that I have never even heard about. Tell me about them. It's for the greater good!!</p>
+
+
+    <form method="POST" action="/insertCheese" style="border:1px solid #ccc" id="cheeseForm">
+      <div class="container">
+        <label><b>Cheese Name</b></label>
+        <input type="text" placeholder="Cheese name here." name="cheeseName" required id="nameOfCheese">
+        <div class="clearfix">
+          <button type="button" class="cancelbtn4">Cancel</button>
+          <button type="submit" class="signupbtn4">Submit</button>
+        </div>
+      </div>
+      <div>
+        <h2 id="ThankYouMsgCheese"></h2>
+      </div>
+      <div>
+        <h3 id="tryAgainCheese"></h3>
+      </div>
+    </form>
+
   </body>
 </html>

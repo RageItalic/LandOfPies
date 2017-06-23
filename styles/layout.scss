@@ -1,7 +1,115 @@
 body {
-  background-color: #EEE;
+  background-color: #FFF;
+  font-family: 'Amatic SC', cursive;
 
   h1 {
     color: #244751;
   }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 50%
+}
+
+p {
+  text-align: center;
+  font-size: 35px;
+}
+label {
+  font-size: 30px;
+}
+
+#clear {
+  cursor: pointer;
+  text-align: center;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn1, .cancelbtn2, .cancelbtn3, .cancelbtn4 {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn1,.signupbtn1, .cancelbtn2, .signupbtn2, .cancelbtn3, .signupbtn3, .cancelbtn4, .signupbtn4 {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+    /* The image used */
+    /*background-image: url("https://static1.squarespace.com/static/55915f17e4b00c1a5671f320/t/56b3b84e37013ba11c3af292/1454618726820/");*/
+
+    /* Set a specific height */
+ /*   height: 760px;*/
+    width: 100%;
+
+    /* Position and center the image to scale nicely on all screens */
+/* Create the parallax scrolling effect */
+
+}
+
+
+/* Place text in the middle of the image */
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#hero-head {
+  font-size: 55px;
+  color: #40E0D0;
+}
+
+#ThankYouMsg, #ThankYouMsgSauce, #ThankYouMsgCheese, #tryAgain, #tryAgainSauce, #tryAgainCheese, #toppings {
+  text-align: center;
+
+}
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn1, .signupbtn1, .cancelbtn2, .signupbtn2, .cancelbtn3, .signupbtn3, .cancelbtn4, .signupbtn4 {
+       width: 100%;
+    }
+}
+
 }
