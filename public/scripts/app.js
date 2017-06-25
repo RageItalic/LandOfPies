@@ -156,13 +156,10 @@ $(() => {
         for (var i=0; i < newToppings.length; i++){
           console.log("THEESE are toppings",newToppings[i].topping_name)
           data.push(newToppings[i].topping_name)
-          if(data.slice(-1)[0]){
-            data.push('.')
-          }else{
-            data.push(', ')
-          }
-
+          data.push(', ')
         }
+        console.log('luke again', data.splice(-1))
+        data.push('.')
         $('#toppings').append(data)
         $('#clear').append('<a><h3>Clear</h3></a>')
       })
